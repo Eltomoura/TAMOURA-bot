@@ -534,7 +534,7 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
 							const { threadID } = event;
 
 					if (event.logMessageData.addedParticipants && Array.isArray(event.logMessageData.addedParticipants) && event.logMessageData.addedParticipants.some(i => i.userFbId == userid)) {
-					api.changeNickname(`》 ${prefix} 《 ❃ ➠Fatkey`, threadID, userid);
+					api.changeNickname(`✰.. ${prefix} ..𝗧𝗢𝗠𝗢𝗨𝗥𝗔..✰`, threadID, userid);
 
 let gifUrls = [
 		'https://i.imgur.com/209z0iM.mp4',
@@ -557,9 +557,9 @@ let gifPath = __dirname + '/cache/connected.mp4';
 axios.get(gifUrl, { responseType: 'arraybuffer' })
 		.then(response => {
 				fs.writeFileSync(gifPath, response.data); 
-				return api.sendMessage("𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗜𝗡𝗚...", event.threadID, () => 
+				return api.sendMessage("𝐔𝐍 𝐈𝐍𝐒𝐓𝐀𝐍𝐓 𝐉𝐄 𝐌𝐄 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄📲...", event.threadID, () => 
 						api.sendMessage({ 
-								body:`🔴🟢🟡\n\n✅ 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦! \n➭ Bot Prefix: ${prefix}\n➭ Admin: ‹${admin}›\n➭ Facebook: ‹https://www.facebook.com/${admin}›\n➭ Use ${prefix}help to view command details\n➭ Added bot at: ⟨ ${time} ⟩〈 ${thu} 〉`, 
+								body:`💙🤟🪶\n\n✅ 𝐃𝐄𝐉𝐀 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐑 𝐀𝐉𝐎𝐔𝐓𝐄𝐑 𝐌𝐎𝐍 𝐁𝐎𝐒𝐒 ✰..𝗧𝗢𝗠𝗢𝗨𝗥𝗔..✰! \n➭ 𝚅𝙾𝙸𝙲𝙸 𝙼𝙾𝙽 𝙿𝚁𝙴𝙵𝙸𝚇➳: ${prefix}\n➭ 𝙼𝙾𝙽 𝙱𝙾𝚂𝚂 ➳: ‹${admin}›\n➭ 𝙻𝙸𝙴𝙽𝚂 𝙳𝙴 𝙼𝙾𝙽 𝙱𝙾𝚂𝚂: ‹https://www.facebook.com/${admin}›\n➭ Use ${prefix}𝙷𝙴𝙻𝙿 𝙿𝙾𝚄𝚁 𝚅𝙾𝙸𝚁 𝚃𝙾𝚄𝚃𝙴 𝙼𝙴𝚂 𝚃𝙴𝙲𝙷𝙽𝙸𝚀𝚄𝙴𝚂\n➭ 𝙹'𝙰𝙸 𝙸𝙽𝚃𝙴𝙶𝚁𝙴𝚁 𝙲𝙴𝚃 𝙶𝚁𝙾𝚄𝙿𝙴 𝙰: ⟨ ${time} ⟩〈 ${thu} 〉`, 
 								attachment: fs.createReadStream(gifPath)
 						}, event.threadID)
 				);
